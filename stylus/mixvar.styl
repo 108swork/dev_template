@@ -1,0 +1,164 @@
+//  mixins & variables
+//  --variables
+sprite = auto auto
+footerPad = auto
+footerPadMedT = auto
+tab = 1023px
+mob = 480px
+mauto =
+  margin 0 auto
+mautota =
+  {mauto}
+  display table
+clear =
+  clear both
+  float none
+wrapp =
+  width 100%
+  min-width 320px
+  position relative
+sw =
+  width 100rem
+  min-width 320px
+tdn =
+  text-decoration none
+oh =
+  overflow hidden
+tac =
+  text-align center
+tar =
+  text-align right
+tal =
+  text-align left
+ttn =
+  text-transform none
+ttu =
+  text-transform uppercase
+ttl =
+  text-transform lowercase
+ttc =
+  text-transform capitalize
+fl =
+  float left
+fr =
+  float right
+vam =
+  display inline-block
+  vertical-align middle
+vat =
+  display inline-block
+  vertical-align top
+vab =
+  display inline-block
+  vertical-align bottom
+bb =
+  box-sizing border-box
+medb =
+  {clear}
+  {mautota}
+  padding 1.5rem
+ovl =
+  pos(t:0,l:0)
+  blok(100%,100%)
+w33 =
+  width 33.2%
+w1 =
+  width 100%
+posr =
+  position relative
+posf =
+  position fixed
+posa =
+  position absolute
+poss =
+  position static
+
+//  --mixins
+med(maxWidth=1024px)
+  @media screen and (max-width: maxWidth)
+    {block}
+pos(t=auto, r=auto, b=auto, l=auto, p=absolute)
+  top t
+  right r
+  bottom b
+  left l
+  position p
+t(t=auto)
+  top t
+r(r=auto)
+  right r
+b(b=auto)
+  bottom b
+l(l=auto)
+  left l
+font(fs=1.4rem,co=#000,lh=1.3,fw=400,fst=normal,tt=none,ff="PT Sans Narrow" sans-serif)
+  font-size fs
+  color co
+  line-height lh
+  font-weight fw
+  font-style fst
+  text-transform tt
+  font-family ff
+bim(i,bs=auto auto,br=no-repeat,bp=0% 0%,bo=padding-box)
+  // background-image url("../../img/" + i)
+  background-image url("../img/" + i)
+  background-size bs
+  background-repeat br
+  background-position bp
+  background-origin bo
+spr(bp=0 0)
+  // background-image url("../../img/sprite.png")
+  background-image url("../img/sprite.png")
+  background-size sprite
+  background-repeat no-repeat
+  background-position bp
+bl(w=auto,h=auto,f=none,b=border-box,c=none,maw=none,mah=none,miw=0,mih=0)
+  width w
+  height h
+  float f
+  box-sizing b
+  clear c
+  min-width miw
+  min-height mih
+  max-width maw
+  max-height mah
+mp(m=0,p=0)
+  margin m
+  padding p
+ma(m=0)
+  margin m
+pa(p=0)
+  padding p
+m(t=0,r=0,l=0,b=0)
+  margin t r b l
+p(t=0,r=0,l=0,b=0)
+  padding t r b l
+mt(mt=0)
+  margin-top mt
+mr(mr=0)
+  margin-right mr
+mb(mb=0)
+  margin-bottom mb
+ml(ml=0)
+  margin-left ml
+pt(pt=0)
+  padding-top pt
+pr(pr=0)
+  padding-right pr
+pb(pb=0)
+  padding-bottom pb
+pl(pl=0)
+  padding-left pl
+wrap(o=visible,w=100%,p=relative,f=none,c=both)
+  overflow o
+  width w
+  position p
+  float f
+  clear c
+grad(cb,ce,deg=0deg,degpr=90deg)
+  background-color cb
+  background -webkit-linear-gradient(degpr, cb 0%, ce 100%)
+  background -moz-linear-gradient(degpr, cb 0%, ce 100%)
+  background -o-linear-gradient(degpr, cb 0%, ce 100%)
+  background -ms-linear-gradient(degpr, cb 0%, ce 100%)
+  background linear-gradient(deg, cb 0%, ce 100%)
