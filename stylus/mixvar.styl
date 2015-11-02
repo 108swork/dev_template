@@ -1,10 +1,13 @@
 //  mixins & variables
 //  --variables
 sprite = auto auto
-footerPad = auto
-footerPadMedT = auto
+fPa = auto
+fPaT = auto
+fPaH = auto
+fPaV = auto
 tab = 1023px
-mob = 480px
+mobh = 480px
+mobv = 320px
 mauto =
   margin 0 auto
 mautota =
@@ -15,13 +18,15 @@ clear =
   float none
 wrapp =
   width 100%
-  min-width 320px
+  min-width 100rem
   position relative
 sw =
   width 100rem
   min-width 320px
 tdn =
   text-decoration none
+tdu =
+  text-decoration underline
 oh =
   overflow hidden
 tac =
@@ -38,6 +43,8 @@ ttl =
   text-transform lowercase
 ttc =
   text-transform capitalize
+it =
+  font-style italic
 fl =
   float left
 fr =
@@ -77,12 +84,6 @@ poss =
 med(maxWidth=1024px)
   @media screen and (max-width: maxWidth)
     {block}
-pos(t=auto, r=auto, b=auto, l=auto, p=absolute)
-  top t
-  right r
-  bottom b
-  left l
-  position p
 t(t=auto)
   top t
 r(r=auto)
@@ -91,7 +92,13 @@ b(b=auto)
   bottom b
 l(l=auto)
   left l
-font(fs=1.4rem,co=#000,lh=1.3,fw=400,fst=normal,tt=none,ff="PT Sans Narrow" sans-serif)
+w(w=auto)
+  width w
+h(h=auto)
+  height h
+z(z=0)
+  z-index z
+font(fs=1.4rem,co=#000,lh=1.3,fw=400,fst=normal,tt=none,ff=monospace)
   font-size fs
   color co
   line-height lh
@@ -100,15 +107,15 @@ font(fs=1.4rem,co=#000,lh=1.3,fw=400,fst=normal,tt=none,ff="PT Sans Narrow" sans
   text-transform tt
   font-family ff
 bim(i,bs=auto auto,br=no-repeat,bp=0% 0%,bo=padding-box)
-  // background-image url("../../img/" + i)
-  background-image url("../img/" + i)
+  background-image url("../../img/" + i)
+  // background-image url("../img" + i)
   background-size bs
   background-repeat br
   background-position bp
   background-origin bo
 spr(bp=0 0)
-  // background-image url("../../img/sprite.png")
-  background-image url("../img/sprite.png")
+  background-image url("../../img/sprite.png")
+  // background-image url("../img/sprite.png")
   background-size sprite
   background-repeat no-repeat
   background-position bp
@@ -129,10 +136,6 @@ ma(m=0)
   margin m
 pa(p=0)
   padding p
-m(t=0,r=0,l=0,b=0)
-  margin t r b l
-p(t=0,r=0,l=0,b=0)
-  padding t r b l
 mt(mt=0)
   margin-top mt
 mr(mr=0)

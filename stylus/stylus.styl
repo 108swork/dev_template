@@ -4,28 +4,43 @@
   padding 0
   box-sizing border-box
 html, body
-  height 100%
+  height: 100%;
   mp(0,0)
+  {oh}
 html
   font-size 10px
 body
   overflow auto
 #t1000
-  blok(100%,1000px)
+  bl(100%,1000px)
 #wrap
   {wrapp}
   min-height 100%
-  padding-bottom footerPad
+  pb fPa
+  +med(tab)
+    pb fPaT
+  +med(mob_h)
+    pb fPaH
+  +med(mob_v)
+    pb fPaV
 #footer_wrap
-  blok(100%,footerPad)
-  pos(b:0,l:0)
+  bl(100%,fPa)
+  {posa}
+  b 0
+  l 0
   {oh}
+  +med(tab)
+    bl(100%,fPaT)
+  +med(mob_h)
+    bl(100%,fPaH)
+  +med(mob_v)
+    bl(100%,fPaV)
 .wrap
   {wrapp}
 .sw
   width 100rem
 .clear
-  blok(100%,c:both)
+  bl(100%,c:both)
 .mauto
   {mauto}
 .mautota
@@ -54,8 +69,10 @@ body
   {ttc}
 .vam
   {vam}
-div,ul
-  list-style-type none
+.vat
+  {vat}
+.vab
+  {vab}
 p
   font(1.4rem)
 a
